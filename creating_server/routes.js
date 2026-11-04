@@ -35,6 +35,7 @@ const requestHandler = (req, res) => {
                 return res.end();
             });
         });
+        
     } 
     else if (url === '/users' && method === 'GET') {
         fs.readFile('users.txt', 'utf8', (err, data) => {
