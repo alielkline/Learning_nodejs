@@ -1,0 +1,20 @@
+<%- include('includes/head') %>
+    <link rel="stylesheet" href="/css/forms.css">
+</head>
+
+<body>
+    <%- include('includes/nav') %>
+
+
+    <main>
+        <form class="user-form" action="/" method="POST">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <button class="btn" type="submit">Add User</button>
+        </form>
+    </main>
+
+<%- include('includes/end') %>

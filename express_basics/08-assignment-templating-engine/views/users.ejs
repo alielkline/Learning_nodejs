@@ -1,0 +1,27 @@
+<%- include('includes/head') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include('includes/nav') %>
+
+
+    <main>
+
+        <% if (names.length > 0) { %>
+            <p>List of all the users...</p>
+            <div class="grid">
+                <% for (let user of names) {%>
+                <article class="card user-item">
+                    <header class="card__header">
+                        <h1 class="user__name"><%= user.name %></h1>
+                    </header>
+                </article>
+                <% } %>
+            </div>
+        <% } else {%>
+        <h1>No Users!</h1>
+        <% } %>
+    </main>
+
+<%- include('includes/end') %>
